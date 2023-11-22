@@ -13,9 +13,11 @@ function App() {
         <h2>App.js</h2>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/edit' element={<Edit />} />
           <Route path='/new' element={<New />} />
-          <Route path='/diary' element={<Diary />} />
+          {/* 1. path variable - /:id */}
+          <Route path='/diary/:id' element={<Diary />} />
+          {/* 2. Query String - ?id=10&mode=dark */}
+          <Route path='/edit' element={<Edit />} />
         </Routes>
         <RouteTest />
       </div>
