@@ -67,7 +67,7 @@ const dummyData = [
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyData);
 
-  const dataId = useRef(0);
+  const dataId = useRef(6);
 
   const onCreate = (date, content, emotion) => {
     dispatch({
@@ -114,7 +114,7 @@ function App() {
               {/* 1. path variable - /:id */}
               <Route path='/diary/:id' element={<Diary />} />
               {/* 2. Query String - ?id=10&mode=dark */}
-              <Route path='/edit' element={<Edit />} />
+              <Route path='/edit/:id' element={<Edit />} />
             </Routes>
           </div>
         </BrowserRouter>
