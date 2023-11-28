@@ -13,7 +13,7 @@ const reducer = (state, action) => {
       return action.data;
 
     case "CREATE":
-      newState = [...action.data, ...state];
+      newState = [action.data, ...state];
       break;
     case "REMOVE":
       newState = state.filter((it) => it.id !== action.targetId);
@@ -73,7 +73,7 @@ function App() {
     dispatch({
       type: "CREATE",
       data: {
-        id: dataId,
+        id: dataId.current,
         date: new Date(date).getTime(),
         content,
         emotion,

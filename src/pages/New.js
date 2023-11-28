@@ -1,5 +1,10 @@
 import React from "react";
+import { DiaryEditor } from "../components/DiaryEditor";
 
 export const New = () => {
-  return <div>New</div>;
+  return (
+    <div>
+      <DiaryEditor />
+    </div>
+  );
 };
